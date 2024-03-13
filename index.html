@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Regex Matcher</h1>
+    <form action="/results" method="post">
+        <label for="test_string">Test String:</label>
+        <input type="text" name="test_string" id="test_string" required>
+        <br>
+        <label for="regex_pattern">Regex Pattern:</label>
+        <input type="text" name="regex_pattern" id="regex_pattern" required>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/validate_email">Validate Email</a>
+</body>
+</html>

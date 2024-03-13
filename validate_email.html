@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form action="/validate_email" method="post">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required>
+        <br>
+        <button type="submit">Validate Email</button>
+    </form>
+    {% if is_valid_email is defined %}
+        {% if is_valid_email %}
+            <p>{{ email }} is a valid email address.</p>
+        {% else %}
+            <p>{{ email }} is not a valid email address.</p>
+        {% endif %}
+    {% endif %}
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
